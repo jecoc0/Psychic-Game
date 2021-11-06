@@ -2,7 +2,21 @@
 <html lang="en">
 
 <head>
-    <style src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"></style>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 300px 550px;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #e5eef3;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            font-size: 20px;
+            text-align: left;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +24,26 @@
 </head>
 
 <body>
+
     <h1>The Psychic Game</h1>
-    <script src="assets/javascript/game.js"></script>
+    <h2>Guess which letter I'm thinking of</h2>
+    <img src="assets/images/PsychicMoonSign.png" alt="Psychic" width='350' height="320">
+    <img src="assets/images/PsychicMoonSign.png" alt="Psychic" width='350' height="320">
+    <img src="assets/images/PsychicMoonSign.png" alt="Psychic" width='350' height="320">
+    <div class="grid-container">
+        <div class="grid-item">Wins:</div>
+        <div class="grid-item" id="wins"></div>
+        <div class="grid-item">Losses:</div>
+        <div class="grid-item" id="losses"></div>
+        <div class="grid-item">Guesses Left:</div>
+        <div class="grid-item" id="remaining-guesses"></div>
+        <div class="grid-item">Your guesses so far:</div>
+        <div class="grid-item" id="guesses-so-far"></div>
+
+        <script src="assets/javascript/game.js"></script>
+
+    </div>
+
 </body>
 
 </html>
